@@ -6,6 +6,10 @@ AC_INIT(forktester, 1.0, carsten.michel@de.ibm.com)
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_CONFIG_SRCDIR([src/fork.c])
 AC_CONFIG_HEADERS([config.h])
+AC_CHECK_FUNCS([gettimeofday])
+AC_CHECK_FUNCS([strerror])
+AC_CHECK_HEADERS([string.h])
+AC_CHECK_HEADERS([sys/time.h])
 
 # Checks for programs.
 AC_PROG_CC
