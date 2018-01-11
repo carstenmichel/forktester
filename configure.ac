@@ -10,6 +10,7 @@ AC_CHECK_FUNCS([gettimeofday])
 AC_CHECK_FUNCS([strerror])
 AC_CHECK_HEADERS([string.h])
 AC_CHECK_HEADERS([sys/time.h])
+AC_FUNC_FORK
 
 # Checks for programs.
 AC_PROG_CC
