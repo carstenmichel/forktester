@@ -54,6 +54,13 @@ void firstTest()
         printf("First close was *NOT* ok \n");
     }
 
+    // Start to manipulate the file pointer to prevent the gcc optimizer to suppress the 2nd close
+    int tempCounter = 0xff;
+    tempCounter = fd->_blksize;
+    fd->_blksize=0;
+    fd->_blksize=tempCounter;
+    // End of magic
+
     gettimeofday(&first, NULL);
     returnCode = fclose(fd);
     gettimeofday(&second, NULL);

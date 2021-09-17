@@ -52,3 +52,6 @@ Mkfile.old
 dkms.conf
 config.log
 config.status
+aclocal.m4
+aix7
+autoscan.log
